@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ether.Network.Photon", "Ether.Network.Photon\Ether.Network.Photon.csproj", "{CAA5EE26-8BE2-45D3-BE0F-6FCEA2AB1FB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAA5EE26-8BE2-45D3-BE0F-6FCEA2AB1FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA5EE26-8BE2-45D3-BE0F-6FCEA2AB1FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA5EE26-8BE2-45D3-BE0F-6FCEA2AB1FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA5EE26-8BE2-45D3-BE0F-6FCEA2AB1FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D94E1F7F-7510-43F5-8CD8-3A9DE29261C3}
+	EndGlobalSection
+EndGlobal
