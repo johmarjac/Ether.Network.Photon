@@ -3,7 +3,7 @@ using Ether.Network.Photon.Common.Protocol;
 
 namespace Ether.Network.Photon.Common
 {
-    public class PhotonConnection : NetUser
+    public abstract class PhotonConnection : NetUser
     {
         public PhotonConnection()
         {
