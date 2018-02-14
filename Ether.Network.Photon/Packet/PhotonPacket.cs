@@ -4,9 +4,13 @@ namespace Ether.Network.Photon.Packet
 {
     public class PhotonPacket : PhotonPacketStream
     {
-        private PhotonPacket()
+        public PhotonPacket()
         {
+        }
 
+        public PhotonPacket(byte[] buffer)
+        {
+            Write(buffer, 0, buffer.Length);
         }
 
         private byte[] BuildBuffer()
