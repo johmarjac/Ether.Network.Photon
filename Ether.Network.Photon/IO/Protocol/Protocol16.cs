@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace Ether.Network.Photon.Common.Protocol
+namespace Ether.Network.Photon.IO.Protocol
 {
     public class Protocol16 : IProtocol
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Ether.Network.Photon.Common
+namespace Ether.Network.Photon.IO
 {
     public class StreamBuffer : Stream
     {

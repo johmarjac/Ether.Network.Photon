@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Ether.Network.Photon.Common.Protocol
+namespace Ether.Network.Photon.IO.Protocol
 {
     public class Protocol
     {

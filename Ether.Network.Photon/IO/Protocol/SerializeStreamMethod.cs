@@ -1,4 +1,4 @@
-﻿namespace Ether.Network.Photon.Common.Protocol
+﻿namespace Ether.Network.Photon.IO.Protocol
 {
     public delegate short SerializeStreamMethod(StreamBuffer outStream, object customObject);
 }

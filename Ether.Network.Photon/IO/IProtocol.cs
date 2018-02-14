@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Ether.Network.Photon.Common.Protocol;
+using Ether.Network.Photon.IO.Protocol;
 
-namespace Ether.Network.Photon.Common
+namespace Ether.Network.Photon.IO
 {
     public abstract class IProtocol
     {

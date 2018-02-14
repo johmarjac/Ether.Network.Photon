@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ether.Network.Photon.Common.Protocol
+namespace Ether.Network.Photon.IO.Protocol
 {
     internal class CustomType
     {
