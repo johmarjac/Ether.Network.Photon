@@ -49,11 +49,45 @@ namespace Ether.Network.Photon.Packet
             }
         }
 
+        public static PhotonPacket OperationRequestTemplate(byte channelId = 0, bool reliable = true, bool encrypted = false)
+        {
+            var packet = new PhotonPacket();
+            packet.Write((byte)0xFB);
+            packet.Write(0);
+            packet.Write(channelId);
+            packet.Write(Convert.ToByte(reliable));
+            packet.Write((byte)0xF3);
+
+            if (encrypted)
+                packet.Write((((byte)PhotonCode.Operation)) | 128);
+            else
+                packet.Write((byte)PhotonCode.Operation);
+
+            return packet;
+        }
+
+        public static PhotonPacket OperationResponseTemplate(byte channelId = 0, bool reliable = true, bool encrypted = false)
+        {
+            var packet = new PhotonPacket();
+            packet.Write((byte)0xFB);
+            packet.Write(0);
+            packet.Write(channelId);
+            packet.Write(Convert.ToByte(reliable));
+            packet.Write((byte)0xF3);
+
+            if (encrypted)
+                packet.Write((((byte)PhotonCode.OperationResponse)) | 128);
+            else
+                packet.Write((byte)PhotonCode.OperationResponse);
+
+            return packet;
+        }
+
         public enum PhotonCode : byte
         {
             Init,
             InitResponse,
-            Operation = 2,
+            Operation,
             OperationResponse,
             Event,
             ClientKey = 6,
