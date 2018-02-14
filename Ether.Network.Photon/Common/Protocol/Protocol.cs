@@ -173,11 +173,11 @@ namespace Ether.Network.Photon.Common.Protocol
             // Note: this type is marked as 'beforefieldinit'.
         }
 
-        public static readonly ProtocolBase GpBinaryV16 = new Protocol16();
+        public static readonly IProtocol GpBinaryV16 = new Protocol16();
 
-        public static readonly ProtocolBase GpBinaryV17;
+        public static readonly IProtocol GpBinaryV17;
 
-        public static readonly ProtocolBase ProtocolDefault = Protocol.GpBinaryV16;
+        public static readonly IProtocol ProtocolDefault = Protocol.GpBinaryV16;
 
         internal static readonly Dictionary<Type, CustomType> TypeDict = new Dictionary<Type, CustomType>();
 

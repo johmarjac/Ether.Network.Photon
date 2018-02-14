@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Ether.Network.Photon.Common.Protocol
 {
-    public class Protocol16 : ProtocolBase
+    public class Protocol16 : IProtocol
     {
         internal override string protocolType
         {

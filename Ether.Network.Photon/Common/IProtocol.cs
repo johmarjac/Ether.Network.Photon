@@ -3,7 +3,7 @@ using Ether.Network.Photon.Common.Protocol;
 
 namespace Ether.Network.Photon.Common
 {
-    public abstract class ProtocolBase
+    public abstract class IProtocol
     {
         internal abstract string protocolType { get; }
 
@@ -61,7 +61,7 @@ namespace Ether.Network.Photon.Common
             this.Serialize(ms, msg, true);
         }
 
-        protected ProtocolBase()
+        protected IProtocol()
         {
         }
     }

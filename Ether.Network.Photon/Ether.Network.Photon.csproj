@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Ether.Network\src\Ether.Network\Ether.Network.csproj" />
+    <ProjectReference Include="..\Ether.Network\src\Ether.Network\Ether.Network.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Client\" />
+    <Folder Include="Server\" />
   </ItemGroup>
 
 </Project>
