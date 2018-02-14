@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Ether.Network.Photon.IO.Protocol;
+using System;
 
 namespace Ether.Network.Photon.Packet
 {
-    public class PhotonPacket : PhotonPacketStream
+    public sealed class PhotonPacket : PhotonPacketStream
     {
         public PhotonPacket()
         {
@@ -11,11 +12,28 @@ namespace Ether.Network.Photon.Packet
         public PhotonPacket(byte[] buffer)
         {
             Write(buffer, 0, buffer.Length);
+            Seek(0, System.IO.SeekOrigin.Begin);
         }
 
         private byte[] BuildBuffer()
         {
-            return base.ToArray();
+            if (IsPingPacket == null || (IsPingPacket.HasValue && IsPingPacket.Value))
+                return ToArray();
+
+            var oldPosition = Position;
+            Seek(1, System.IO.SeekOrigin.Begin);
+            SerializeBigEndianInt32(Size);
+            Seek(oldPosition, System.IO.SeekOrigin.Begin);
+
+            return ToArray();
+        }
+
+        private void SerializeBigEndianInt32(int value)
+        {
+            var offs = 0;
+            var bLen = new byte[4];
+            Protocol.Serialize(value, bLen, ref offs);
+            Write(bLen, 0, bLen.Length);
         }
 
         public override byte[] Buffer => BuildBuffer();
@@ -95,6 +113,13 @@ namespace Ether.Network.Photon.Packet
             else
                 packet.Write((byte)PhotonCode.OperationResponse);
 
+            return packet;
+        }
+
+        public static PhotonPacket PingTemplate()
+        {
+            var packet = new PhotonPacket();
+            packet.Write((byte)0xF0);
             return packet;
         }
 
