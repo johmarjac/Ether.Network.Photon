@@ -16,6 +16,17 @@ namespace Ether.Network.Photon.Packet
 
         public override byte[] Buffer => BuildBuffer();
 
+        public bool? IsPingPacket
+        {
+            get
+            {
+                if (Size < 1)
+                    return null;
+
+                return Convert.ToBoolean(ToArray()[0] == 0xF0);
+            }
+        }
+
         public bool? IsReliable
         {
             get
