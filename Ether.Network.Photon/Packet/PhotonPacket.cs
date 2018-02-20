@@ -1,4 +1,5 @@
 ﻿using Ether.Network.Photon.IO.Protocol;
+using Ether.Network.Photon.Util;
 using System;
 
 namespace Ether.Network.Photon.Packet
@@ -120,6 +121,22 @@ namespace Ether.Network.Photon.Packet
         {
             var packet = new PhotonPacket();
             packet.Write((byte)0xF0);
+            return packet;
+        }
+
+        public static PhotonPacket InitTemplate()
+        {
+            var packet = new PhotonPacket();
+            var initBytes = "fb000000300001f30001061e410106004c6f616442616c616e63696e6700000000000000000000000000000000000000".ToArray();
+            packet.Write(initBytes, 0, initBytes.Length);
+            return packet;
+        }
+
+        public static PhotonPacket InitResponseTemplate()
+        {
+            var packet = new PhotonPacket();
+            var initBytes = "fb0000000a0001f30100".ToArray();
+            packet.Write(initBytes, 0, initBytes.Length);
             return packet;
         }
 

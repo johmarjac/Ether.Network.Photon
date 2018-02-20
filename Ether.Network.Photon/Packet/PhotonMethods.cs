@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ether.Network.Photon.Packet
 {
-    internal static class PhotonIOMethods
+    internal static class PhotonMethods
     {
         internal static Dictionary<Type, Action<BinaryWriter, object>> OutMethods = new Dictionary<Type, Action<BinaryWriter, object>>
         {

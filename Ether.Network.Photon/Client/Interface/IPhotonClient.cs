@@ -6,6 +6,7 @@ namespace Ether.Network.Photon.Client.Interface
     {
         void SendOperationRequest();
         void SendEvent();
+        void SendPing();
         
         IProtocol SerializationProtocol { get; }
     }

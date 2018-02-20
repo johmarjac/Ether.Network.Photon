@@ -14,10 +14,10 @@ namespace Ether.Network.Photon.Packet
 
         public T Read<T>()
         {
-            if (!PhotonIOMethods.InMethods.ContainsKey(typeof(T)))
+            if (!PhotonMethods.InMethods.ContainsKey(typeof(T)))
                 throw new InvalidOperationException(nameof(T));
 
-            return (T)PhotonIOMethods.InMethods[typeof(T)](Reader);
+            return (T)PhotonMethods.InMethods[typeof(T)](Reader);
         }
 
         public T[] Read<T>(int amount)
@@ -27,7 +27,7 @@ namespace Ether.Network.Photon.Packet
 
             if (type == typeof(byte))
                 array = this.Reader.ReadBytes(amount) as T[];
-            else if (PhotonIOMethods.InMethods.ContainsKey(type))
+            else if (PhotonMethods.InMethods.ContainsKey(type))
             {
                 for (var i = 0; i < amount; i++)
                     array[i] = Read<T>();
@@ -40,8 +40,8 @@ namespace Ether.Network.Photon.Packet
         {
             Type type = typeof(T);
 
-            if (PhotonIOMethods.OutMethods.ContainsKey(type))
-                PhotonIOMethods.OutMethods[type](Writer, value);
+            if (PhotonMethods.OutMethods.ContainsKey(type))
+                PhotonMethods.OutMethods[type](Writer, value);
         }
         
         public int Size => (int)base.Length;

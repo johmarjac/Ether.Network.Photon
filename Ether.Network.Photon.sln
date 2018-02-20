@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ether.Network.Photon", "Ether.Network.Photon\Ether.Network.Photon.csproj", "{CAA5EE26-8BE2-45D3-BE0F-6FCEA2AB1FB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ether.Network", "Ether.Network\src\Ether.Network\Ether.Network.csproj", "{6927F111-6BEE-4B40-9624-BFB9DDA5B3CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ether.Network.Photon.Tests", "Ether.Network.Photon.Tests\Ether.Network.Photon.Tests.csproj", "{9DBA7E0A-5397-4FE0-9E1A-794E8998256F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6927F111-6BEE-4B40-9624-BFB9DDA5B3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6927F111-6BEE-4B40-9624-BFB9DDA5B3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6927F111-6BEE-4B40-9624-BFB9DDA5B3CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DBA7E0A-5397-4FE0-9E1A-794E8998256F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DBA7E0A-5397-4FE0-9E1A-794E8998256F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DBA7E0A-5397-4FE0-9E1A-794E8998256F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DBA7E0A-5397-4FE0-9E1A-794E8998256F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
